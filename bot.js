@@ -13,9 +13,9 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === 'I love you') {
-            message.reply('I love you too');
+        message.reply('I love you too');
     }
-}};
+});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
