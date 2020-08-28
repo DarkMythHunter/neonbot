@@ -29,10 +29,11 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
+bot.on("message", message => {
     if (message.author.bot) return
-    if (message.content.includes('miss') {
-        message.reply('miss ka ba?');
+    const hello = ["hello"];
+    if( hello.some(word => message.content.includes(word)) ) {
+        message.channel.send("Hello!");
     }
 });
 
