@@ -33,9 +33,9 @@ client.on('message', message => {
     if (message.content === 'miss') {
         message.reply('miss ka ba?');
     }
-    else if(message.content.includes('miss')) {
+/*    else if(message.content.includes('miss')) {
     message.reply('miss ka ba?');
-    }
+    }*/
 });
 
 
