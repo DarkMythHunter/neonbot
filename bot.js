@@ -29,14 +29,6 @@ client.on('message', message => {
     }
 });
 
-bot.on("message", message => {
-    if (message.author.bot) return
-    const hello = ["hello"];
-    if( hello.some(word => message.content.includes(word)) ) {
-        message.channel.send("Hello!");
-    }
-});
-
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
