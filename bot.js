@@ -17,5 +17,17 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if (message.content === 'nat') {
+        message.reply('gago ka ba');
+    }
+});
+
+client.on('message', message => {
+    if (message.content === 'papy') {
+        message.reply('MARK GSAUCE FRIES');
+    }
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
