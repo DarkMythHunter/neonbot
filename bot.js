@@ -30,10 +30,8 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '!say') {
-        const sayMessage = args.join(" ");
-        message.delete().catch(O_o=>{});
-        message.channel.send(sayMessage);
+    if (message.content === 'miss') {
+        message.reply('miss ka ba?');
     }
 });
 
