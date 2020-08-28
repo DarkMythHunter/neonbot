@@ -30,11 +30,12 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.author === client.user) return
     if (message.author.bot) return
-    if (message.content.includes('miss')
+    if (message.content.includes('miss') {
         message.reply('miss ka ba?');
+    }
 });
+
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
