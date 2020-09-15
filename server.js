@@ -54,7 +54,7 @@ const wakeUpDyno = (url, interval = 25, callback) => {
   }, milliseconds);
 };
 
-async def members():
+/*async def members():
     activeGuilds = bot.guilds
     channel = bot.get_channel(<755395214964686898>)
     sum = 0
@@ -69,7 +69,7 @@ async def on_member_join(member):
 
 @bot.event
 async def on_member_remove(member):
-    await members()
+    await members()*/
 
 // import modules
 const Discord = require("discord.js");
