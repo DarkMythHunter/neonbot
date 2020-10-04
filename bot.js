@@ -23,13 +23,6 @@ client.on('message', message => {
     }
 });
 
-bot.on('guildMemberAdd', member => {
-  console.log('User' + member.user.tag + 'has joined the server!');
-
-  var role = member.guild.roles.find('name', 'user');
-  member.addRole(Kikiam);
-});
-
 client.on('message', message => {
     if (message.content === 'papy') {
         message.reply('MARK GSAUCE FRIES');
