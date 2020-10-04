@@ -28,7 +28,7 @@ bot.on('guildMemberAdd', member => {
 
   var role = member.guild.roles.find('name', 'user');
   member.addRole(Kikiam);
-};
+});
 
 client.on('message', message => {
     if (message.content === 'papy') {
