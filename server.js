@@ -54,6 +54,13 @@ const wakeUpDyno = (url, interval = 25, callback) => {
   }, milliseconds);
 };
 
+bot.on('guildMemberAdd', member => {
+  console.log('User' + member.user.tag + 'has joined the server!');
+
+  var role = member.guild.roles.find('name', 'user');
+  member.addRole(Kikiam);
+};
+
 /*async def members():
     activeGuilds = bot.guilds
     channel = bot.get_channel(<755395214964686898>)
