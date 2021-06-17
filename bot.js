@@ -1,32 +1,33 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const MessageEmbed = require('discord.js');
+const client = new Discord.Client({disableEveryone: true});
+const auth = require("./auth.json");
 
 client.on('ready', () => {
-    console.log('I am ready!');
+    console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
-});
 
-client.on('message', message => {
-    if (message.content === 'I love you') {
-        message.reply('I love you too');
-    }
-});
 
-client.on('message', message => {
-    if (message.content === 'nat') {
-        message.reply('gago ka ba');
-    }
-});
+client.on('message', async message => { 
+    if (message.channel.type == 'dm') {      
+            const embed = new Discord.MessageEmbed()
+                .setColor('#F1C40F')
+                .setTitle(`${message.author.tag}`) 
+                .setDescription(message.content) 
+                .setFooter(`${message.author.id}`)
+                .setTimestamp();
+                client.channels.cache.get('855106161027710986').send(embed);
+        } 
+}) 
 
-client.on('message', message => {
-    if (message.content === 'papy') {
-        message.reply('MARK GSAUCE FRIES');
-    } 
+client.on('message', async message => { 
+    if (message.channel.type == 'dm') {      
+            const embed = new Discord.MessageEmbed()
+                .setColor('#F1C40F')
+                .setDescription(message.content) 
+                client.channels.cache.get('855088827424309268').send(embed);
+        } 
 });
 
 
